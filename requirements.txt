@@ -6,7 +6,6 @@
 #
 --index-url https://pypi.doubanio.com/simple/
 
-appdirs==1.4.3            # via setuptools
 click==6.7                # via flask, pip-tools
 first==2.0.1              # via pip-tools
 flask==0.12
@@ -14,14 +13,7 @@ itsdangerous==0.24        # via flask
 jinja2==2.9.5             # via flask
 markupsafe==1.0           # via jinja2
 marshmallow==2.13.4       # via webargs
-packaging==16.8           # via setuptools
 pip-tools==1.8.1
-py==1.4.33                # via pytest
-pyparsing==2.2.0          # via packaging
-pytest==3.0.7
-six==1.10.0               # via packaging, pip-tools, setuptools
+six==1.10.0               # via pip-tools
 webargs==1.6.0
 werkzeug==0.12.1          # via flask
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools                # via pytest

@@ -1,6 +1,8 @@
 default:
 	echo 'Nothing here.'
 
+testenv:
+	venv/bin/pip install mock pytest watchdog
 
 test:
-	py.test tests
+	venv/bin/py.test tests
