@@ -11,4 +11,16 @@ class Service(object):
 
 
 class Repository(object):
-    pass
+
+    def __init__(self, db):
+        self.db = db
+
+    def to_columns(self, obj, *keys):
+        return {k: getattr(obj, k) for k in keys}
+
+    def parse_order(self, order):
+        if order.startswith('-'):
+            suffix = 'DESC'
+        else:
+            suffix = 'ASC'
+        return '`{}` {}'.format(order.strip('-+'), suffix)
