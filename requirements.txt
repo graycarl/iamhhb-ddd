@@ -6,6 +6,7 @@
 #
 --index-url https://pypi.doubanio.com/simple/
 
+arrow==0.10.0
 click==6.7                # via flask, pip-tools
 first==2.0.1              # via pip-tools
 flask==0.12
@@ -14,6 +15,7 @@ jinja2==2.9.5             # via flask
 markupsafe==1.0           # via jinja2
 marshmallow==2.13.4       # via webargs
 pip-tools==1.8.1
-six==1.10.0               # via pip-tools
+python-dateutil==2.6.0    # via arrow
+six==1.10.0               # via pip-tools, python-dateutil
 webargs==1.6.0
 werkzeug==0.12.1          # via flask
