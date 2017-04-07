@@ -1,3 +1,4 @@
+# TODO: Refactory using PeeweeORM
 class Entity(object):
     pass
 
