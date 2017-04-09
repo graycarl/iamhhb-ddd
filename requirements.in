@@ -2,3 +2,5 @@ pip-tools
 flask
 webargs
 arrow
+webassets
+libsass

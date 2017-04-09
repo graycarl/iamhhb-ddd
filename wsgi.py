@@ -1,13 +1,10 @@
 # -*- coding: utf-8 -*-
-from werkzeug.wsgi import DispatcherMiddleware
 from werkzeug.serving import run_simple
 from werkzeug.contrib.fixers import ProxyFix
-from iamhhb.http import home, blog
+from iamhhb.http import create_app
 
 
-app = DispatcherMiddleware(home.create_app(), {
-    '/blog': blog.create_app(),
-})
+app = create_app()
 
 # Proxy fix
 app = ProxyFix(app)
