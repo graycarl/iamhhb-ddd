@@ -1,12 +1,35 @@
 body {
+    > footer {
+        background-color: #eee;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 1em;
+        color: gray;
+        text-align: right;
+        margin: 0;
+    }
+    position: relative;
+    height: auto;
+    padding-bottom: 5em;
+    min-height: 100%;
+    .main-content {
+        padding-top: 6em;
+    }
+}
+
+.clearfix {
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
 }
 
 .ui.menu .header.item .logo {
     margin-right: 10px;
-}
-
-.main-content {
-    padding-top: 6em;
 }
 
 /* About ME */
