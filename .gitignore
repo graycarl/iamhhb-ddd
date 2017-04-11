@@ -3,3 +3,4 @@ __pycache__
 /.cache
 /bower_components
 .webassets-cache
+.DS_Store
