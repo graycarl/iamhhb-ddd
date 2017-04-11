@@ -15,7 +15,7 @@
     {% endfor %}
     <title>{{ title }}</title>
 </head>
-<body>
+<body id="{{ request.blueprint or request.endpoint }}">
     <div class="ui fixed pointing menu">
         <div class="ui container">
             <a href="/" class="header item{% if request.path == '/' %} active{% endif %}">
