@@ -70,9 +70,9 @@ body {
       border: 0.15em solid #ccc; }
 
 #blogs .blog-toc {
-  margin: 2em 0 0 3em;
+  margin: 2em 0 0 2em;
   float: left;
-  width: 20em; }
+  width: 16em; }
 
 #blogs pre {
   background-color: #444;
