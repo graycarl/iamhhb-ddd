@@ -25,6 +25,37 @@ body {
 .ui.menu .header.item .logo {
   margin-right: 10px; }
 
+.article-content .meta, #blogs .blog-content .meta {
+  background-color: #eee;
+  padding: 15px;
+  font-size: 90%;
+  color: gray;
+  margin-bottom: 1em; }
+  .article-content .meta .time, #blogs .blog-content .meta .time {
+    text-align: right; }
+
+.article-content blockquote, #blogs .blog-content blockquote {
+  margin: 1em 0;
+  padding: 0.5em 0 0.5em 1em;
+  border-left: 0.5em solid #ddd; }
+
+.article-content p, #blogs .blog-content p {
+  line-height: 1.5em; }
+
+.article-content b, #blogs .blog-content b, .article-content strong, #blogs .blog-content strong {
+  color: #333;
+  margin: 0 0.2em; }
+
+.article-content table, #blogs .blog-content table {
+  width: 100%;
+  font-size: 90%;
+  text-align: left; }
+  .article-content table thead, #blogs .blog-content table thead {
+    background-color: #eee; }
+  .article-content table th, #blogs .blog-content table th, .article-content table td, #blogs .blog-content table td {
+    padding: 0.5em;
+    border: 0.15em solid #ccc; }
+
 /* About ME */
 .ui.card.about-me {
   margin: 0 auto; }
@@ -42,32 +73,6 @@ body {
 #blogs .blog-content {
   max-width: 40em;
   float: left; }
-  #blogs .blog-content .meta {
-    background-color: #eee;
-    padding: 15px;
-    font-size: 90%;
-    color: gray;
-    margin-bottom: 1em; }
-    #blogs .blog-content .meta .time {
-      text-align: right; }
-  #blogs .blog-content blockquote {
-    margin: 1em 0;
-    padding: 0.5em 0 0.5em 1em;
-    border-left: 0.5em solid #ddd; }
-  #blogs .blog-content p {
-    line-height: 1.5em; }
-  #blogs .blog-content b, #blogs .blog-content strong {
-    color: #333;
-    margin: 0 0.2em; }
-  #blogs .blog-content table {
-    width: 100%;
-    font-size: 90%;
-    text-align: left; }
-    #blogs .blog-content table thead {
-      background-color: #eee; }
-    #blogs .blog-content table th, #blogs .blog-content table td {
-      padding: 0.5em;
-      border: 0.15em solid #ccc; }
 
 #blogs .blog-toc {
   margin: 2em 0 0 2em;
@@ -80,6 +85,12 @@ body {
   font-size: 85%;
   font-family: menlo,monospace;
   color: #ccc; }
+
+/* Reading */
+#reading .reading-list .item > .image > img {
+  height: 9em;
+  width: auto;
+  margin: 0 0 0 auto; }
 
 /* PyGments */
 .highlight {

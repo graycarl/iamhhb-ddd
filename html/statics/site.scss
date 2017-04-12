@@ -32,6 +32,43 @@ body {
     margin-right: 10px;
 }
 
+.article-content {
+    .meta {
+        background-color: #eee;
+        padding: 15px;
+        font-size: 90%;
+        color: gray;
+        margin-bottom: 1em;
+        .time {
+            text-align: right;
+        }
+    }
+    blockquote {
+        margin: 1em 0;
+        padding: 0.5em 0 0.5em 1em;
+        border-left: 0.5em solid #ddd;
+    }
+    p {
+        line-height: 1.5em;
+    }
+    b, strong {
+        color: #333;
+        margin: 0 0.2em;
+    }
+    table {
+        width: 100%;
+        font-size: 90%;
+        text-align: left;
+        thead {
+            background-color: #eee;
+        }
+        th, td {
+            padding: 0.5em;
+            border: 0.15em solid #ccc;
+        }
+    }
+}
+
 /* About ME */
 .ui.card.about-me {
     margin: 0 auto;
@@ -51,45 +88,11 @@ body {
     .blog-item {
         color: #555;
         font-size: 120%;
-
     }
     .blog-content {
         max-width: 40em;
         float: left;
-        .meta {
-            background-color: #eee;
-            padding: 15px;
-            font-size: 90%;
-            color: gray;
-            margin-bottom: 1em;
-            .time {
-                text-align: right;
-            }
-        }
-        blockquote {
-            margin: 1em 0;
-            padding: 0.5em 0 0.5em 1em;
-            border-left: 0.5em solid #ddd;
-        }
-        p {
-            line-height: 1.5em;
-        }
-        b, strong {
-            color: #333;
-            margin: 0 0.2em;
-        }
-        table {
-            width: 100%;
-            font-size: 90%;
-            text-align: left;
-            thead {
-                background-color: #eee;
-            }
-            th, td {
-                padding: 0.5em;
-                border: 0.15em solid #ccc;
-            }
-        }
+        @extend .article-content;
     }
     .blog-toc {
         margin: 2em 0 0 2em;
@@ -103,7 +106,17 @@ body {
         font-family: menlo,monospace;
         color: #ccc;
     }
+}
 
+/* Reading */
+#reading {
+    .reading-list {
+        .item > .image > img {
+            height: 9em;
+            width: auto;
+            margin: 0 0 0 auto;
+        }
+    }
 }
 
 /* PyGments */
