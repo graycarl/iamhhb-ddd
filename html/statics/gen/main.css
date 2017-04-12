@@ -25,34 +25,34 @@ body {
 .ui.menu .header.item .logo {
   margin-right: 10px; }
 
-.article-content .meta, #blogs .blog-content .meta, #reading .note-content .meta {
+.article-content .meta, #blogs .blog-content .meta, #reading .note-content .meta, #wikis .wiki-content .meta {
   background-color: #eee;
   padding: 15px;
   font-size: 90%;
   color: gray;
   margin-bottom: 1em; }
-  .article-content .meta .time, #blogs .blog-content .meta .time, #reading .note-content .meta .time {
+  .article-content .meta .time, #blogs .blog-content .meta .time, #reading .note-content .meta .time, #wikis .wiki-content .meta .time {
     text-align: right; }
 
-.article-content blockquote, #blogs .blog-content blockquote, #reading .note-content blockquote {
+.article-content blockquote, #blogs .blog-content blockquote, #reading .note-content blockquote, #wikis .wiki-content blockquote {
   margin: 1em 0;
   padding: 0.5em 0 0.5em 1em;
   border-left: 0.5em solid #ddd; }
 
-.article-content p, #blogs .blog-content p, #reading .note-content p {
+.article-content p, #blogs .blog-content p, #reading .note-content p, #wikis .wiki-content p {
   line-height: 1.5em; }
 
-.article-content b, #blogs .blog-content b, #reading .note-content b, .article-content strong, #blogs .blog-content strong, #reading .note-content strong {
+.article-content b, #blogs .blog-content b, #reading .note-content b, #wikis .wiki-content b, .article-content strong, #blogs .blog-content strong, #reading .note-content strong, #wikis .wiki-content strong {
   color: #333;
   margin: 0 0.2em; }
 
-.article-content table, #blogs .blog-content table, #reading .note-content table {
+.article-content table, #blogs .blog-content table, #reading .note-content table, #wikis .wiki-content table {
   width: 100%;
   font-size: 90%;
   text-align: left; }
-  .article-content table thead, #blogs .blog-content table thead, #reading .note-content table thead {
+  .article-content table thead, #blogs .blog-content table thead, #reading .note-content table thead, #wikis .wiki-content table thead {
     background-color: #eee; }
-  .article-content table th, #blogs .blog-content table th, #reading .note-content table th, .article-content table td, #blogs .blog-content table td, #reading .note-content table td {
+  .article-content table th, #blogs .blog-content table th, #reading .note-content table th, #wikis .wiki-content table th, .article-content table td, #blogs .blog-content table td, #reading .note-content table td, #wikis .wiki-content table td {
     padding: 0.5em;
     border: 0.15em solid #ccc; }
 
@@ -94,6 +94,11 @@ body {
 
 #reading .note-content {
   padding-top: 1em; }
+
+/* Wikis */
+#wikis .wiki-content {
+  padding-top: 4em;
+  max-width: 45em; }
 
 /* PyGments */
 .highlight {

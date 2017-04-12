@@ -121,6 +121,16 @@ body {
     }
 }
 
+/* Wikis */
+#wikis {
+    .wiki-content {
+        padding-top: 4em;
+        max-width: 45em;
+        @extend .article-content;
+    }
+}
+
+
 /* PyGments */
 .highlight {
     .hll { background-color: #49483e }

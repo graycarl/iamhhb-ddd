@@ -1,5 +1,50 @@
 {% extends "layout.html.j2" %}
 
 {% block content %}
-    This is a wiki index page.
+<div class="wiki-content ui segment">
+
+    <div class="ui right rail">
+        <div class="ui search">
+            <div class="ui icon input">
+              <input class="prompt" type="text" placeholder="Search Keywords">
+              <i class="search icon"></i>
+            </div>
+            <div class="results"></div>
+        </div>
+        <div class="ui segment">
+            <ul class="ui list">
+                <li class="item"><a href="#">Linux</a></li>
+                <li class="item"><a href="#">Python</a></li>
+                <li class="item"><a href="#">Flask</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="ui top attached label">
+        <h3 class="ui header">首页 [Index]</h3>
+    </div>
+
+    <p>Good good study, day day up.</p>
+
+    <h2><a class="anchor" id="language" href="#language"><i class="fa fa-link"></i></a>Language</h2>
+
+    <p><a class="internal present" href="/wiki/Python">Python</a>, <a class="internal present" href="/wiki/Ruby">Ruby</a>, <a class="internal present" href="/wiki/Bash">Bash</a>, <a class="internal present" href="/wiki/HTML">HTML</a></p>
+
+    <h2><a class="anchor" id="development-framework-database" href="#development-framework-database"><i class="fa fa-link"></i></a>Development: Framework &amp; DataBase</h2>
+
+    <p><a class="internal present" href="/wiki/Rails">Rails</a>, <a class="internal present" href="/wiki/Django">Django</a>, <a class="internal present" href="/wiki/Alembic">Alembic</a>, <a class="internal present" href="/wiki/DataBase-Concurrency">DataBase Concurrency</a>, <a class="internal present" href="/wiki/Tornado">Tornado</a>, <a class="internal present" href="/wiki/Gunicorn">Gunicorn</a>, <a class="internal present" href="/wiki/SqlAlchemy">SqlAlchemy</a></p>
+
+    <h2><a class="anchor" id="system" href="#system"><i class="fa fa-link"></i></a>System</h2>
+
+    <p><a class="internal present" href="/wiki/Docker">Docker</a>, <a class="internal present" href="/wiki/UFW">UFW</a>, <a class="internal present" href="/wiki/Ubuntu">Ubuntu</a>, <a class="internal present" href="/wiki/Home-Brew">Home Brew</a>, <a class="internal present" href="/wiki/Mac">Mac</a></p>
+
+    <h2><a class="anchor" id="tools" href="#tools"><i class="fa fa-link"></i></a>Tools</h2>
+
+    <p><a class="internal present" href="/wiki/Ngrok">Ngrok</a>, <a class="internal present" href="/wiki/Omni">Omni</a>, <a class="internal present" href="/wiki/JQ">JQ</a>, <a class="internal present" href="/wiki/Git">Git</a>, <a class="internal present" href="/wiki/Vim">Vim</a>, <a class="internal present" href="/wiki/VS-Code">VS Code</a>, <a class="internal present" href="/wiki/Atom">Atom</a>, <a class="internal present" href="/wiki/ZSH">ZSH</a></p>
+
+    <h2><a class="anchor" id="其它" href="#其它"><i class="fa fa-link"></i></a>其它</h2>
+
+    <p><a class="internal present" href="/wiki/Gollum">Gollum</a>, <a class="internal present" href="/wiki/Proxy">Proxy</a>, <a class="internal present" href="/wiki/Kindle">Kindle</a>, <a class="internal present" href="/wiki/Shell">Shell</a>, <a class="internal present" href="/wiki/Mirrors">Mirrors</a>, <a class="internal present" href="/wiki/VPS">VPS</a>, <a class="internal present" href="/wiki/Windows7">Windows7</a>, <a class="internal present" href="/wiki/Jenkins">Jenkins</a></p>
+
+</div>
 {% endblock %}
