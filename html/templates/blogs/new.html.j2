@@ -1,0 +1,24 @@
+{% extends "layout.html.j2" %}
+
+{% block content %}
+
+<div class="ui green segment">
+    <form action="" method="post" class="ui form">
+        <!-- <h4 class="ui dividing header">新建 Blog</h4> -->
+        <div class="field">
+            <label for="ipt-title">标题</label>
+            <input type="text" name="title" id="ipt-title">
+        </div>
+        <div class="field">
+            <label for="ipt-sub-title">副标题</label>
+            <input type="text" name="sub_title" id="ipt-sub-title">
+        </div>
+        <div class="field">
+            <label for="ipt-content">内容</label>
+            <textarea name="content" id="ipt-content"></textarea>
+        </div>
+        <button class="ui button" type="submit">创建文章</button>
+    </form>
+</div>
+
+{% endblock %}
