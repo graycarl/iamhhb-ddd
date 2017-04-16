@@ -6,7 +6,12 @@
 - 读书笔记
 - Wiki笔记
 
-## TODO LIST
+重新做这么个简单的项目，主要是为了配合最近的学习而进行的练习：
 
-- [ ] Reading Model
-- [ ] Wikis Model
+- 「领域驱动设计」
+- Django
+- Angular 2
+- React
+
+项目的一些小的 TODO 会直接写在代码注释中，大的一些 TODO 会在 Coding 的「讨论」
+这个功能下跟踪。
