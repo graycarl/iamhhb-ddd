@@ -1,7 +1,7 @@
 BEGIN;
 -- Blog Table
 CREATE TABLE blog (
-    id INTEGER PRIMARY KEY,
+    id CHAR(64) PRIMARY KEY,
     title VARCHAR(200) NOT NULL,
     sub_title VARCHAR(200) NOT NULL,
     content TEXT NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE book (
 );
 -- Wiki Page
 CREATE TABLE wiki_page (
-    id VARCHAR(40) PRIMARY KEY,
+    id CHAR(64) PRIMARY KEY,
     title VARCHAR(80) NOT NULL,
     content TEXT NOT NULL,
     content_type VARCHAR(20) NOT NULL,

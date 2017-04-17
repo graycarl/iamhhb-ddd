@@ -1,5 +1,6 @@
-from flask import Flask, render_template
-from iamhhb import consts
+from flask import Flask, render_template, g
+from iamhhb import consts, models
+from iamhhb.libs import database, datastructures
 from . import blog, assets, reading, wikis
 
 
@@ -7,6 +8,9 @@ def create_app():
     app = Flask(__name__,
                 template_folder=consts.http['templates_folder'],
                 static_folder=consts.http['static_folder'])
+
+    app.before_request(before_request)
+    app.teardown_request(teardown_request)
 
     @app.context_processor
     def register_context():
@@ -28,3 +32,14 @@ def create_app():
     app.register_blueprint(reading.bp, url_prefix='/reading')
 
     return app
+
+
+def before_request():
+    g.db = database.DB(consts.database['path'])
+    g.repos = datastructures.NameSpace(
+        blog=models.BlogRepository(g.db)
+    )
+
+
+def teardown_request():
+    g.db.close()

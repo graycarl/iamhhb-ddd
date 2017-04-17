@@ -9,3 +9,8 @@ http = {
     'bower_folder': op.join(config.HOME, 'bower_components'),
     'webassets_cache': op.join(config.HOME, '.cache', 'webassets')
 }
+
+
+database = {
+    'path': op.join(config.RUNDIR, 'db.sqlite')
+}
