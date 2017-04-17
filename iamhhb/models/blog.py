@@ -5,9 +5,10 @@ from .base import Entity, Repository
 # TODO Features: Custom Style / Commentable / Fixtop / Status
 class Blog(Entity):
 
-    def __init__(self, title, sub_title, content,
+    def __init__(self, title, sub_title, slogan, content,
                  content_type='markdown', created_at=None, updated_at=None):
         self.id = None
+        self.slogan = slogan
         self.title = title
         self.sub_title = sub_title
         self.content = content
@@ -23,7 +24,8 @@ class BlogRepository(Repository):
         now = arrow.now().to('utc').datetime
         if blog.id is None:
             columns = self.to_columns(
-                blog, 'title', 'sub_title', 'content', 'content_type')
+                blog,
+                'slogan', 'title', 'sub_title', 'content', 'content_type')
             columns['created_at'] = columns['updated_at'] = now
             id = self.db.insert(self.tablename, columns)
             blog.id = id
@@ -53,6 +55,7 @@ class BlogRepository(Repository):
 
     def reconstruct(self, row):
         blog = Blog(
+            slogan=row['slogan'],
             title=row['title'],
             sub_title=row['sub_title'],
             content=row['content'],

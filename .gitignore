@@ -2,5 +2,6 @@ __pycache__
 /venv
 /.cache
 /bower_components
+/run
 .webassets-cache
 .DS_Store

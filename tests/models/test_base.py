@@ -19,9 +19,10 @@ def test_repo_save_and_get(db):
     from iamhhb.models import Blog, BlogRepository
     blog_repo = BlogRepository(db)
     b1 = Blog(
-        title=u'测试文章',
-        sub_title=u'这是一个副标题',
-        content=u'这里是文章的内容'
+        title='测试文章',
+        slogan='test-article',
+        sub_title='这是一个副标题',
+        content='这里是文章的内容'
     )
     b2 = blog_repo.save(b1)
     assert b2 is b1
@@ -42,9 +43,10 @@ def test_repo_save_and_get(db):
     assert len(blogs) == total == 1
     assert blogs[0].id == b2.id
     blog_repo.save(Blog(
-        title=u'New Title',
-        sub_title=u'aaaa',
-        content=u'bbb'
+        slogan='test-new-title',
+        title='New Title',
+        sub_title='aaaa',
+        content='bbb'
     ))
     blogs, total = blog_repo.gets(limit=20, order='created_at')
     assert total == 2

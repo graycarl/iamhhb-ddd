@@ -1,9 +1,10 @@
 BEGIN;
 -- Blog Table
 CREATE TABLE blog (
-    id CHAR(64) PRIMARY KEY,
+    id INTEGER PRIMARY KEY,
     title VARCHAR(200) NOT NULL,
     sub_title VARCHAR(200) NOT NULL,
+    slogan CHAR(80) UNIQUE NOT NULL,
     content TEXT NOT NULL,
     content_type VARCHAR(20) NOT NULL,
     created_at DATETIME,

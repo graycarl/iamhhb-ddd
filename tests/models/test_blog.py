@@ -9,9 +9,10 @@ def blog_repo(db):
 
 def test_repo(blog_repo):
     b1 = Blog(
-        title=u'测试文章',
-        sub_title=u'这是一个副标题',
-        content=u'这里是文章的内容'
+        slogan='test-article-1',
+        title='测试文章',
+        sub_title='这是一个副标题',
+        content='这里是文章的内容'
     )
     blog_repo.save(b1)
     assert b1.id is not None

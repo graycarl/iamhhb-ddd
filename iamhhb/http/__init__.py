@@ -41,5 +41,5 @@ def before_request():
     )
 
 
-def teardown_request():
+def teardown_request(exc):
     g.db.close()
