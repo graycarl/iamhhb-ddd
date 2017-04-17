@@ -2,32 +2,18 @@
 
 {% block content %}
 <div class="ui very relaxed items blog-list">
+    {% for blog in blogs %}
     <div class="item">
         <div class="image">
-            Dec 27, 2016
+            {{ blog.created_at.format('MMM D, YYYY') }}
         </div>
         <div class="content">
-            <a href="{{ url_for('blogs.item', slug='haha') }}" class="header">当 SqlAlchemy 没有了外键</a>
-            <p class="description">如何在不使用外键的情况下，继续发挥 SqlAlchemy 的超强动力。</p>
+            <a href="{{ url_for('blogs.item', id=blog.id) }}" class="header">
+                {{ blog.title }}
+            </a>
+            <p class="description">{{ blog.sub_title }}</p>
         </div>
     </div>
-    <div class="item">
-        <div class="image">
-            Dec 27, 2016
-        </div>
-        <div class="content">
-            <a href="{{ url_for('blogs.item', slug='haha') }}" class="header">当 SqlAlchemy 没有了外键</a>
-            <p class="description">如何在不使用外键的情况下，继续发挥 SqlAlchemy 的超强动力。</p>
-        </div>
-    </div>
-    <div class="item">
-        <div class="image">
-            Dec 27, 2016
-        </div>
-        <div class="content">
-            <a href="{{ url_for('blogs.item', slug='haha') }}" class="header">当 SqlAlchemy 没有了外键</a>
-            <p class="description">如何在不使用外键的情况下，继续发挥 SqlAlchemy 的超强动力。</p>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 {% endblock %}

@@ -53,6 +53,12 @@ class DB(object):
         else:
             raise NotImplementedError
 
+    def commit(self):
+        self.conn.commit()
+
+    def rollback(self):
+        self.conn.rollback()
+
     def close(self):
         if self.conn:
             self.conn.close()

@@ -1,7 +1,7 @@
 default:
 	echo 'Nothing here.'
 
-testenv:
+dev:
 	venv/bin/pip install mock pytest watchdog
 
 test:
@@ -12,3 +12,6 @@ watch:
 
 serve:
 	venv/bin/python wsgi.py
+
+init-db:
+	sqlite run/db.sqlite < assets/db-schema.sql

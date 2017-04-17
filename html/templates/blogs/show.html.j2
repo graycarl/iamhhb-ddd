@@ -3,83 +3,28 @@
 {% block content %}
 <div class="blog-item clearfix">
 
-<div class="blog-content">
-  <h1>拖拉一点也无妨</h1>
-  <div class="meta">
-    <p class="summary">又是一个读完书之后的碎碎念。</p>
-    <p class="time">Published @ 2014-08-21</p>
-  </div>
-  <p>标题是书名，昨天开始看了一部分。里面的核心内容<strong>结构化拖延法</strong>的确挺有意思的。其核心是依赖了这么一个"理论"：</p>
-<blockquote><p>人们总是会对当前该干的事情之外的事情很有热情</p>
-</blockquote>
-<p>基于这个论据，首先可以解决一个问题：很多拖延症人对自己的行为感到非常的羞愧和自卑。其实完全不用羞愧，因为：</p>
-<blockquote><p>你不是也做完了很多件不该干的事情了么</p>
-</blockquote>
-<p>虽然不该干，那也只是当时的重要性不是最高而已，但毕竟还是完成了很多件事情了啊。虽然耽误了最重要的事情，但是很可能你自己过高的估计了它的重要性了。所以，</p>
-<blockquote><p>别自悲，你很棒</p>
-</blockquote>
-<p>这个<strong>结构化拖延法</strong>还有一个意义就是，其实你是可以利用这种看似不好的"理论"：把自己所有要做的事情尽量都列出来，按重要性排序。然后当你不想干一件<strong>挺重要</strong>的事情的时候，你就会吧一些<strong>不重要</strong>的事情先做了来满足自己不去干那件<strong>重要</strong>的事情的愿望。嗯，结果就是<strong>重要</strong>的事情没干好，但是回头一看，你还是完成了很多的事情的。当然，前提得时那些<strong>重要</strong>的事情并不是那么的致命。</p>
-
-<pre class="highlight"><span></span><span class="kn">import</span> <span class="nn">sqlalchemy</span> <span class="kn">as</span> <span class="nn">sa</span>
-<span class="kn">import</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">as</span> <span class="nn">orm</span>
-<span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="kn">import</span> <span class="n">declarative_base</span>
-
-<span class="n">Base</span> <span class="o">=</span> <span class="n">declarative_base</span><span class="p">()</span>
-</pre>
-
-<p>四个隔离级别定义如下：</p>
-<table>
-<thead><tr>
-<th>隔离级别</th>
-<th>脏读</th>
-<th>不可重复读</th>
-<th>幻读</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>读未提交（Read uncommitted）</td>
-<td>可能</td>
-<td>可能</td>
-<td>可能 </td>
-</tr>
-<tr>
-<td>读已提交（Read committed）</td>
-<td>不可能</td>
-<td>可能</td>
-<td>可能</td>
-</tr>
-<tr>
-<td>可重复读（Repeatable read）</td>
-<td>不可能</td>
-<td>不可能</td>
-<td>可能 </td>
-</tr>
-<tr>
-<td>可串行化（Serializable ）</td>
-<td>不可能</td>
-<td>不可能</td>
-<td>不可能</td>
-</tr>
-</tbody>
-</table>
-
-
-<div class="ui horizontal divider"> END </div>
-</div>
-
-<div class="ui piled segment blog-toc">
-    <div class="content">
-            <h4 class="ui header">章节导航:</h4>
-            <ul class="ui list">
-              <li> <a href="#7d5496"> 定义 </a> </li>
-              <li> <a href="#59bb97"> 各数据库的实现情况 </a> </li>
-              <li> <a href="#6deaa1"> 参考a </a> </li>
-            </ul>
+    <div class="blog-content">
+        <h1>{{ blog.title }}</h1>
+        <div class="meta">
+            <p class="summary">{{ blog.sub_title }}</p>
+            <p class="time">Published @ {{ blog.created_at.format('YYYY-MM-DD')}}</p>
+        </div>
+        {{ blog.content | markdown }}
+        <div class="ui horizontal divider"> END </div>
     </div>
-</div>
+
+    <div class="ui piled segment blog-toc">
+        <div class="content">
+            <h4 class="ui header">章节导航:</h4>
+            <span class="ui gray text">待实现</span>
+            <!-- <ul class="ui list">
+                <li> <a href="#7d5496"> 定义 </a> </li>
+                <li> <a href="#59bb97"> 各数据库的实现情况 </a> </li>
+                <li> <a href="#6deaa1"> 参考a </a> </li>
+            </ul> -->
+        </div>
+    </div>
 
 </div>
 
-<p>Some content</p>
 {% endblock %}

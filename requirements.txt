@@ -15,7 +15,9 @@ jinja2==2.9.5             # via flask
 libsass==0.12.3
 markupsafe==1.0           # via jinja2
 marshmallow==2.13.4       # via webargs
+mistune==0.7.4
 pip-tools==1.8.1
+pygments==2.2.0
 python-dateutil==2.6.0    # via arrow
 six==1.10.0               # via libsass, pip-tools, python-dateutil
 webargs==1.6.0

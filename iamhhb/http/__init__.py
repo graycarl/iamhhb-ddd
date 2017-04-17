@@ -1,6 +1,7 @@
-from flask import Flask, render_template, g
+from flask import Flask, render_template, g, current_app, Markup
 from iamhhb import consts, models
 from iamhhb.libs import database, datastructures
+from iamhhb.core import markdown
 from . import blog, assets, reading, wikis
 
 
@@ -9,8 +10,14 @@ def create_app():
                 template_folder=consts.http['templates_folder'],
                 static_folder=consts.http['static_folder'])
 
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
+
     app.before_request(before_request)
     app.teardown_request(teardown_request)
+
+    @app.template_filter('markdown')
+    def render_markdown(s):
+        return Markup(markdown(s))
 
     @app.context_processor
     def register_context():
@@ -39,6 +46,7 @@ def before_request():
     g.repos = datastructures.NameSpace(
         blog=models.BlogRepository(g.db)
     )
+    current_app.logger.info('Using database: %s', g.db.filename)
 
 
 def teardown_request(exc):
