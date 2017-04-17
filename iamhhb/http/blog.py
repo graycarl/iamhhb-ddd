@@ -45,7 +45,7 @@ def item(id):
     )
 
 
-@bp.route('/<id>/edit')
+@bp.route('/<id>/edit', methods=['get', 'post'])
 def edit(id):
     blog = g.repos.blog.get(id)
     if not blog:
@@ -54,6 +54,7 @@ def edit(id):
         for key in ('title', 'sub_title', 'content'):
             setattr(blog, key, request.form[key])
         g.repos.blog.save(blog)
+        g.db.commit()
         return redirect(url_for('.item', id=id))
     return render_template(
         'blogs/edit.html.j2',
